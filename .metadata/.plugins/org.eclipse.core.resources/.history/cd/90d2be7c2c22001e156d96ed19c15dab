@@ -1,0 +1,21 @@
+package StepDefs;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+
+public class FlightAvailability {
+	WebDriver driver =null;
+	@Given("A user is on the flight home page")
+	public void a_user_is_on_the_flight_home_page() {
+		System.getProperty("webdriver.chrome.driver", "C:/Users/olabi/eclipse-workspace/Com.GeoProject/src/test/resources/drivers/chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+System.out.println("I GOT TO THIS POINT");
+
+	}
+}

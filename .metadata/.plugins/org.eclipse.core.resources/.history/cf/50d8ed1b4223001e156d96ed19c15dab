@@ -1,0 +1,95 @@
+package StepDefs;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+
+public class FlightDestinatinationAvailability {
+	
+	WebDriver driver =null;
+	@Given("A user is on the flight home page")
+	public void a_user_is_on_the_flight_home_page() throws Throwable {
+		String projectPath =System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectPath +"/src/test/resources/drivers/chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		driver.navigate().to("https://www.britishairways.com");
+
+		driver.findElement(By.xpath("//*[@id=\"ensCloseBanner\"]")).click();
+
+	}
+
+	@And("The user enter the FROM destination with {string} and {string} in the search boxes")
+	public void the_user_enter_the_from_destination_with_and_in_the_search_boxes(String ABBREVIATION, String FROM_DESTINATION) {
+
+		driver.findElement(By.xpath("//*[@id=\"from\"]")).click();
+
+		driver.findElement(By.xpath("//*[@id=\"from\"]")).sendKeys(ABBREVIATION);
+		driver.findElement(By.xpath("//*[@id=\"from\"]")).sendKeys(FROM_DESTINATION);
+		driver.findElement(By.xpath("//*[@id=\"from\"]")).click();
+	}
+
+	@And("The user enter the TO destination {string} with {string} in the search boxes")
+	public void the_user_enter_the_to_destination_with_in_the_search_boxes(String ABBREVIATION1, String TO_DESTINATION) {
+
+		driver.findElement(By.xpath("//*[@id=\"to\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"to\"]")).sendKeys(ABBREVIATION1);
+		driver.findElement(By.xpath("//*[@id=\"to\"]")).sendKeys(TO_DESTINATION);
+
+	}
+
+	@Given("The user select the leaving date {string} and {string}")
+	public void the_user_select_the_leaving_date_and(String MONTH1, String DAY1) throws InterruptedException {
+
+		driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[2]/div/div[2]")).click();
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[4]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/span[1]/span")).getText();
+		driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[4]/div/div/div/div[2]/div/div/div[2]/div[2]/div[3]/table/tbody/tr[4]/td[6]/div[1]")).click();
+		Thread.sleep(1000);
+	}
+	
+	@Given("The user select the return date {string} and {string}")
+	public void the_user_select_the_return_date_and(String MONTH2, String DAY2) throws InterruptedException {
+	   // String MONTH="July 2023";
+	   // String DAY="29";
+	    
+		//driver.findElement(By.xpath("//*[@id=\"datepicker-pop-up-modal ba-datepicker\"]/div/div[2]/div[1]/div/div[1]/span")).click();
+		//Thread.sleep(1000);
+    //   while(true) 
+     //  {
+		driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[4]/div/div/div/div[2]/div/div/div[2]/div[2]/div[3]/table/tbody/tr[5]/td[6]/div[1]/span")).click();
+      //   if(text.equals(MONTH2));
+{
+	//break;
+}
+      
+       }
+   //    driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[4]/div/div/div/div[2]/div/div/div[2]/div[2]/div[3]/table/tbody/tr[4]/td[6]/div[1]")).click();
+	//	Thread.sleep(1000);
+		
+		
+//		String text=driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[3]/div/div[2]/div")).getText();
+       }
+	
+//}
+	
+       
+       
+
+
+
+//driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[4]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/span[3]/span")).click();
+
+
+
+	
+

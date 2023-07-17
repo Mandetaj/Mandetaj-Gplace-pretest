@@ -1,0 +1,25 @@
+package StepDefs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
+
+public class FlightClassChecksPage {
+	WebDriver driver =null;
+	
+	@And("The user click the Travel class button")
+	public void the_user_click_the_travel_class_button() {
+		driver.findElement(By.xpath("//*[@id=\"sb-flight-travel-class\"]")).click();
+ 
+	}
+	
+	
+	@When("The user click on their of choice class and select {string}")
+	public void the_user_click_on_their_of_choice_class_and_select(String TRAVELCLASS) {
+
+		driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/form[2]/div/div/div[2]/div[2]/div[1]/form/div/div[1]/label")).click();
+	}
+	//*[@id="sb-flight-travel-class"]
+}

@@ -1,0 +1,11 @@
+package StepDefs.copy;
+
+import io.cucumber.java.en.Given;
+
+public class Login {
+	@Given("A user is on the flight home page")
+	public void a_user_is_on_the_flight_home_page() {
+System.out.println("I GOT TO THIS POINT");
+
+	}
+}

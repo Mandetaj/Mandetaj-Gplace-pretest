@@ -1,0 +1,10 @@
+package StepDefs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+//public class FlightClassChecksPage {
+	//WebDriver driver =null;
+	//driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[5]/button[1]")).click(); 
+
+//}/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[4]/div[1]/div[2]/div/span[2]

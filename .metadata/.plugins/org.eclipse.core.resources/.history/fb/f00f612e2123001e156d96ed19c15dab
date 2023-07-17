@@ -1,0 +1,24 @@
+Feature: Ticket Booking Application
+
+  Scenario Outline: User should be able to search for destination on the airline page BA
+    Given A user is on the flight home page
+    And The user enter  the destination "<ABBREVIATION>" and "<FROM_DESTINATION>" in the search boxes
+
+    #When I complete action
+    #And some other action
+    #And yet another action
+    #Then I validate the outcomes
+    #And check more outcomes
+    Examples: 
+      | ABBREVIATION | FROM_DESTINATION                  | status  |
+      | LHR          | London, London Heathrow (LHR), UK | success |
+  #@tag2
+  #Scenario Outline: Title of your scenario outline
+    #Given I want to write a step with <name>
+    #When I check for the <value> in step
+    #Then I verify the <status> in step
+#
+    #Examples: 
+      #| name  | value | status  |
+      #| name1 |     5 | success |
+      #| name2 |     7 | Fail    |

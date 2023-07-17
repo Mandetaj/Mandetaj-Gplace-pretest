@@ -1,0 +1,13 @@
+Feature: Title of your feature
+
+
+    Scenario Outline: A user should be able to select a Business or Economy class with dates and cost on a flight
+    Given A user is on the flight home page has entered all the required information for a flight
+    #When I check for the <value> in step
+    #When I check for the <value> in step
+    #Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+     # | name2 |     7 | Fail    |

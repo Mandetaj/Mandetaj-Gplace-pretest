@@ -1,0 +1,90 @@
+package StepDefs;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+
+public class FlightDestinatinationAvailability {
+	WebDriver driver =null;
+	@Given("A user is on the flight home page")
+	public void a_user_is_on_the_flight_home_page() throws Throwable {
+		String projectPath =System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectPath +"/src/test/resources/drivers/chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		driver.navigate().to("https://www.britishairways.com");
+		
+//driver.findElement(By.xpath("//*[@id=\"ensCloseBanner\"]")).click();
+//driver.findElement(By.xpath("//*[@id=\"from\"]")).click();
+//
+//driver.findElement(By.xpath("//*[@id=\"from\"]")).sendKeys("LHR");
+//driver.findElement(By.xpath("//*[@id=\"from\"]")).sendKeys("London, London Heathrow (LHR), UK");
+//
+//
+//
+////driver.findElement(By.xpath("//*[@id=\"ensCloseBanner\"]")).click();
+//driver.findElement(By.xpath("//*[@id=\"to\"]")).click();
+//driver.findElement(By.xpath("//*[@id=\"to\"]")).sendKeys("Nig");
+//driver.findElement(By.xpath("//*[@id=\"to\"]")).sendKeys("Lagos, Lagos Murtala Muhammed International (LOS), Nigeria");
+//
+
+
+//driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[5]/button[1]")).click();
+//driver.findElement(By.xpath("/html/body/main/div[2]/div[2]/div/div[1]/div/div/div/div[3]/div/div/form/div/div[2]/div/div[1]/div[5]/button[1]")).click();
+
+
+//Thread.sleep(1000);
+//Thread.sleep(1000);
+
+
+//driver.findElement(By.xpath("29")).click();
+
+
+//*[@id="flight-inbound-date-selector"]/div[2]/div
+
+//WebElement to=driver.findElement(By.xpath("//*[@id=\"to\"]"));
+//Select selectObject1 =new Select(to);
+//selectObject1.selectByVisibleText("London, London Heathrow (LHR), UK");
+
+//driver.findElement(By.cssSelector("#flightPanel > div:nth-child(2) > div > div:nth-child(1) > div.large-2.small-12.columns.search-button-container.ng-scope > button.primary.search-button > span")).click();
+
+//#flightPanel > div:nth-child(2) > div > div:nth-child(1) > div.large-2.small-12.columns.search-button-container.ng-scope > button.primary.search-button > span
+
+
+//*[@id="to"]
+
+////*[@id="from"]
+		
+		
+		//driver.switchTo().frame("frameResult");
+//System.out.println("I GOT TO THIS POINT");
+		
+//WebElement destination=driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/div/div/div/label"));
+
+     //driver.findElement(By.xpath("//*[@id=\"headlessui-combobox-option-32\"]/div/span")).click();
+
+	//}
+//	
+//	@And("The user enter {string} and {string} search boxes")
+//	public void the_user_enter_and_search_boxes(String FROM_DESTINATION, String TO_DESTINATION) throws InterruptedException {
+//		WebElement destination=driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/div/div/div/label"))
+//	
+//		Thread.sleep(1000);
+//		Select dropdown=new Select(destination);
+//		dropdown.selectByVisibleText("Skien Airport Geiteryggen Skien, Norway");
+//     driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/div/div/div/label")).click();
+//     Thread.sleep(1000);
+//     driver.findElement(By.xpath("//*[@id=\"headlessui-combobox-option-3127\"]/div")).sendKeys(FROM_DESTINATION);
+     //.sendKeys(FROM_DESTINATION);
+
+	
+	}
+}

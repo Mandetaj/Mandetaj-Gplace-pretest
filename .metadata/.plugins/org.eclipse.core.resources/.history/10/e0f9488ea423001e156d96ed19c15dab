@@ -1,0 +1,14 @@
+//package StepDefs;
+//
+//import io.cucumber.java.en.And;
+////import io.cucumber.java.en.Given;
+//
+//public class DatePage {
+//	@And("The user select the leaving date {string} and {string}")
+//	public void the_user_select_the_leaving_date_and(String LMONTH, String LDAY) {
+//		String MONTH="July 2023";
+//		String DAY="23";
+//	    
+//	}
+//
+//}

@@ -1,0 +1,5 @@
+StepDefs\LoginPage.class
+StepDefs\FlightDestinatinationAvailability.class
+StepDefs\FlightClassChecksPage.class
+StepDefs\Init.class
+StepDefs\RunnerClass.class

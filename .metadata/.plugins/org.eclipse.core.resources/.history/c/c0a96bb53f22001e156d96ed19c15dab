@@ -1,0 +1,44 @@
+package StepDefs;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+
+public class FlightDestinatinationAvailability {
+	WebDriver driver =null;
+	@Given("A user is on the flight home page")
+	public void a_user_is_on_the_flight_home_page() {
+		String projectPath =System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectPath +"/src/test/resources/drivers/chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		driver.navigate().to("https://flights.virginatlantic.com");
+		
+		driver.switchTo().frame("frameResult");
+//System.out.println("I GOT TO THIS POINT");
+
+	//}
+//	
+//	@And("The user enter {string} and {string} search boxes")
+//	public void the_user_enter_and_search_boxes(String FROM_DESTINATION, String TO_DESTINATION) throws InterruptedException {
+//		WebElement destination=driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/div/div/div/label"));
+//	
+//		Thread.sleep(1000);
+//		Select dropdown=new Select(destination);
+//		dropdown.selectByVisibleText("Skien Airport Geiteryggen Skien, Norway");
+//     driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div[1]/div/div/div/div/div/div/label")).click();
+//     Thread.sleep(1000);
+//     driver.findElement(By.xpath("//*[@id=\"headlessui-combobox-option-3127\"]/div")).sendKeys(FROM_DESTINATION);
+     //.sendKeys(FROM_DESTINATION);
+
+	
+	}
+}

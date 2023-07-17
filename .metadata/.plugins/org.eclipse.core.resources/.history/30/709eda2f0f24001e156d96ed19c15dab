@@ -1,0 +1,18 @@
+Feature: Title of your feature
+
+  Scenario Outline: A user should be able to select a Business or Economy class with dates and cost on a flight
+    Given A user is on the flight home page
+    And The user enter the FROM destination with "<ABBREVIATION>" and "<FROM_DESTINATION>" in the search boxes
+    And The user enter the TO destination "<ABBREVIATION1>" with "<TO_DESTINATION>" in the search boxes
+    And The user select the leaving date "<MONTH1>" and "<DATE1>"
+    And The user select the return date "<MONTH2>" and "<DATE2>"
+    And The user click the Travel class button
+    When The user click on their of choice class and select "<TRAVELCLASS>"
+    Then The selected "<TRAVELCLASS>" is confirmed
+    But The user is blocked with permission issue due to automated software been used
+
+    Examples: 
+      | TRAVELCLASS | MONTH1    | DATE1 | MONTH2         | DATE2 | ABBREVIATION1 | ABBREVIATION | FROM_DESTINATION                  | TO_DESTINATION                                             |
+      | Economy     | July 2023 |    22 | August 2023    |    10 | Nig           | LHR          | London, London Heathrow (LHR), UK | Lagos, Lagos Murtala Muhammed International (LOS), Nigeria |
+      | Business    | July 2023 |    22 | September 2023 |    15 | Nig           | LHR          | London, London Heathrow (LHR), UK | Lagos, Lagos Murtala Muhammed International (LOS), Nigeria |
+      | First class | July 2023 |    22 | August 2023    |    11 | Nig           | LHR          | London, London Heathrow (LHR), UK | Lagos, Lagos Murtala Muhammed International (LOS), Nigeria |
