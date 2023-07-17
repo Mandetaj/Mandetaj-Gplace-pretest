@@ -6,3 +6,4 @@ However on the actual tests most of the assertions were removed due to the secue
 Test cases were written on the sign up page but code were not glued to it as this high secured section that requires 
 valid emails etc.
 Other class files were also added with notes/TODO in them
+N.B Finally the code base was not cleaned up just to demonstraight some of the efforts used in getting the source code to work
